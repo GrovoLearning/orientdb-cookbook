@@ -1,9 +1,9 @@
 {
-    "autoDeploy": true,
-    "hotAlignment": true,
+    "autoDeploy": <%= node['orientdb']['distributed']['auto_deploy'] %>,
+    "hotAlignment": <%= node['orientdb']['distributed']['hot_alignment'] %>,
     "executionMode": "undefined",
-    "readQuorum": 1,
-    "writeQuorum": 2,
+    "readQuorum": <%= node['orientdb']['distributed']['read_quorum'] %>,
+    "writeQuorum": <%= node['orientdb']['distributed']['write_quorum'] %>,
     "failureAvailableNodesLessQuorum": false,
     "readYourWrites": true,
     "clusters": {

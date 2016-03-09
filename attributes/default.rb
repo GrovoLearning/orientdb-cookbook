@@ -31,6 +31,10 @@ default['orientdb']['hazelcast']['network']['join']['aws']['security-group-name'
 default['orientdb']['hazelcast']['network']['join']['aws']['tag-key'] = 'type'
 default['orientdb']['hazelcast']['network']['join']['aws']['tag-value'] = 'hz-nodes'
 
+default['orientdb']['distributed']['auto_deploy'] = true
+default['orientdb']['distributed']['hot_alignment'] = false
+default['orientdb']['distributed']['read_quorum'] = 1
+default['orientdb']['distributed']['write_quorum'] = 2
 
 default['orientdb']['node_search_criteria'] = "orientdb_hazelcast_group_name:#{node['orientdb']['hazelcast']['group']['name']} AND orientdb_hazelcast_group_password:#{node['orientdb']['hazelcast']['group']['password']}"
 
